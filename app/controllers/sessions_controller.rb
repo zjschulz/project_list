@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
             render :new
         else 
             log_in(@user)
-            redirect_to welcome_path?
+            redirect_to projects_path
         end
         # if request.env["omniauth.auth"]
         #     @user = User.find_by(github_uid: request.env["omniauth.auth"]["uid"])
