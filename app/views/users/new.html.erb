@@ -1,0 +1,20 @@
+<h2>Create New User</h2>
+
+<p><%= render partial: '/errors', locals: { record: @user } %></p
+
+<div><%= form_for @user, url: signup_path do |t| %>
+    <div>
+    <%= t.label :user_name %>
+    <%= t.text_field :user_name %>
+    <%= t.label :first_name %>
+    <%= t.text_field :first_name %>
+    <%= t.label :last_name %>
+    <%= t.text_field :last_name %>
+    <%= t.label :email %>
+    <%= t.text_field :email %>
+    <%= t.label :password %>
+    <%= t.password_field :password %>
+    <%= t.label :confirm_password %>
+    <%= t.password_field :password_confirmation %>
+    <%= t.submit %></div>
+<% end %></div>
