@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :sections
   resources :comments
   resources :projects
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  get '/', to: 'static#home'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
